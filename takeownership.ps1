@@ -1,9 +1,9 @@
 # Takes ownership of all files
 # Define the owner account/group
 $Account = New-Object -TypeName System.Security.Principal.NTAccount -ArgumentList '####USER HERE#####';
-
+$Path = # INSERT Folder Path here
 # Get a list of folders and files
-$ItemList = Get-ChildItem -Path E:\Users\Shari\Dropbox\mic\Kamera-Uploads -Recurse;
+$ItemList = Get-ChildItem -Path $Path -Recurse;
 
 # Iterate over files/folders
 foreach ($Item in $ItemList) {
